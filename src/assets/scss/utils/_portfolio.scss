@@ -1,0 +1,160 @@
+.banner-wrap {
+  margin-top: 6rem;
+  background-color: $primary-color-100;
+  padding: 5rem 0;
+}
+.banner {
+  max-width: 41.875rem;
+  margin: 0 auto;
+}
+.banner-text {
+  text-align: center;
+  margin: -1.25rem 0;
+  span {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+  }
+  
+  h1 > span > img {
+    position: absolute;
+    left: 40px;
+    width: 85%;
+    bottom: 0;
+    z-index: -1;
+  } 
+}
+.quote-left{
+  text-align: left;
+}
+.quote-right{
+  text-align: right;
+}
+.banner-list {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  text-align: center;
+  
+  li {
+    width: 18.625rem;
+  }
+  
+  hr {
+    color: $primary-color-400;
+    width: 1.5rem;
+    border: 0.125rem solid;
+  }
+  p {
+    margin-top: 0.25rem;
+    color: $primary-color-700;
+  }
+}
+@media (max-width: 1400px) {
+  .banner-wrap {
+    margin-top: 3.5rem;
+  }
+}
+@media (max-width: 1200px) {
+  h1 {
+    font-size: $font-size-6;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+  }
+  .banner-text {
+    margin: 0;
+  }
+}
+@media (max-width: 768px) {
+  .banner-wrap {
+    padding-top: 2.5rem;
+  }
+  .banner-text {
+    padding: 0 2.344rem;
+    margin-bottom: 2.5rem;
+  }
+  .quote-left{
+    text-align: center;
+  }
+  .quote-right{
+    display: none;
+  }
+  .banner-list {
+    flex-direction: column;
+    align-items: center;
+    margin: 0rem 4.37rem;
+    gap: 1.25rem;
+    
+    li {
+      width: auto;
+    }
+  }
+}
+/*------------------------------------------*/
+main {
+  padding: 7.5rem 19.5rem 0 19.5rem;
+}
+.works-card-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.works-card {
+  margin: 0 0 5rem 0;
+}
+.works-card-img {
+  overflow: hidden;
+  img {
+    @extend .card-img;
+    transition: 0.5s;
+  }
+  &:hover img {
+    transform: scale(1.1) rotate(2deg);
+  }
+}
+.works-card-text {
+  h2 {
+    margin-top: 1rem;
+  }
+  p {
+    margin-top: 0.5rem;
+  }
+}
+.works-card-tag {
+  margin-top: 1.5rem;
+  display: flex;
+  li {
+      span {
+      border-radius: 1rem;
+      background: $primary-color-200;
+      padding: 0.25rem 0.75rem;
+      margin-right: 1rem;
+    }
+  }
+}
+.works-card-page-list {
+  @extend .page-list;
+  margin-top: -0.5rem;
+  margin-bottom: 7.5rem;
+}
+@media (max-width: 1200px) {
+  main {
+    padding: 5rem 0.75rem 0 0.75rem;
+  }
+}
+@media (max-width: 768px) {
+  h2 {
+    font-size: $font-size-6;
+    line-height: 1.5;
+  }
+  .works-card-text{
+    padding: 0 1rem;
+  }
+  .works-card-tag {
+    padding-left: 1rem;
+  }
+  .works-card-page-list {
+    margin-bottom: 5rem;
+  }
+}

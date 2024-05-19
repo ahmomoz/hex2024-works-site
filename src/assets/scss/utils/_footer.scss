@@ -1,0 +1,65 @@
+footer {
+  background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/footer-bg-lg.png");
+  display: flex;
+  justify-content: space-around;
+  padding: 3.5rem 0 5rem 0;
+  p {
+    color: $primary-color-700;
+  }
+}
+.footer-logo {
+  margin: auto 0;
+  a {
+    color: $primary-color-500;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.footer-logo-text {
+  margin: 1.5rem 0;
+}
+.footer-link-list {
+  li {
+    margin-top: 1.5rem;
+    &:nth-child(1) a {
+      background-color: $primary-color-900;
+      p {
+        color: $primary-color-50; 
+      }
+    }
+  }
+  li > a {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid $primary-color-400;
+    background-color: $primary-color-50;
+    &:hover {
+      background-color: $primary-color-900;
+      p {
+        color: $primary-color-50; 
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2.5rem;
+  }
+  .footer-logo{
+    text-align: center;
+    img {
+      width: 7.5rem;
+    }
+  }
+  .footer-link-list {
+    li {
+      width: 19.125rem; 
+    }
+  }
+}
