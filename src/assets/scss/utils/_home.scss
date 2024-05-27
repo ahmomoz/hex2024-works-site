@@ -1,0 +1,363 @@
+.home-banner-img {
+  padding-right: 3rem;
+}
+.home-banner-wrap {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.home-banner-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 1.5rem;
+  
+  p {
+    color: $primary-color-500;
+  }
+  
+  p > span {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+  }
+  
+  p > span > img {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+  }
+}
+.title {
+  margin-bottom: 1.5rem;
+}
+.text {
+  margin-bottom: 1rem;
+  
+  p {
+    font-size: $font-size-6;
+    color: $primary-color-600;
+    line-height: 1.25;
+  }
+}
+.icon-list {
+  margin-top: 3.75rem;
+  display: flex;
+  gap: 1rem;
+  
+  & > li > a:hover img {
+    transform: scale(1.2);
+    transition: transform 0.3s;
+  }
+}
+
+@media (max-width: 1400px) {
+  .home-banner-wrap {
+    margin-top: 3.5rem;
+  }
+  .home-banner-img {
+    padding-right: 0;
+  }
+  .home-banner-wrap {
+    display: block;
+  }
+  .home-banner-text {
+    text-align: center;
+    align-items: center;
+    margin-right: 0;
+    padding: 0 3.344rem;
+    
+    h1 {
+      font-size: $font-size-3;
+    }
+  }
+  .text {
+    
+    p {
+      line-height: 1.5;
+    }
+    
+    p:first-child {
+      margin-bottom: 0.5rem;
+    }
+  }
+  .icon-list {
+    margin: 1.5rem 0 2.5rem 0;
+  }
+}
+/*------------------------------------------*/
+.works-list-container {
+  padding-top: 7.5rem;
+}
+.works-list {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  gap: 3.438rem;
+}
+.works-list:nth-child(1) {
+  background-image: 
+    url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/homepage-work1-bg.png");
+  margin-top: 5rem;
+}
+.works-list:nth-child(3) {
+  background-image: 
+    linear-gradient(90deg, #0a101380 50%, transparent 50%), url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/homepage-work2-lg.png");
+  justify-content: start;
+  padding-left: 19.5rem;
+}
+.works-list:nth-child(5) {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .4)), url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/homepage-work3-bg.png");
+  align-items: center;
+}
+.works-list-text-wrap-media {
+  display: none;
+}
+.works-list-img {
+  padding-top: 5rem;
+}
+.works-list-text-wrap {
+  border-radius: 1.5rem;
+  width: 32.875rem;
+  margin: 12.5rem 0;
+  padding: 5rem 2.5rem 3.5rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+.works-list-text-wrap::before {
+  content: '';
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(0.188rem);
+  position: absolute;
+  z-index: -1;
+  top: 0;right: 0;bottom: 0;left: 0;
+}
+.works-list-text {
+  padding-bottom: 2.5rem;
+  border-bottom: 0.063rem solid $primary-color-200;
+  
+  h4 {
+    color: $primary-color-50;
+    line-height: 1.4;
+  }
+  
+  p {
+    color: $primary-color-50;
+    font-weight: 400;
+    padding-top: 0.5rem;
+  }
+}
+.home-works-card-tag {
+  display: flex;
+  
+  li {
+    margin-top: 1.5rem;
+    
+    span {
+      @extend .tag-span;
+      background-color: $primary-color-50;
+    }
+  }
+}
+.works-list-text-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 3.5rem;
+}
+
+@media (max-width: 1400px) {
+  .works-list-container {
+    padding-top: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  .works-list {
+    padding: 0 2.5rem;
+  }
+  .works-list:nth-child(1) {
+    margin-top: 2.5rem;
+  }
+  .works-list:nth-child(3) {
+    background-image: 
+      url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/homepage-work2-lg.png");
+    padding: 12.188rem 0;
+  }
+  .works-list:nth-child(5) {
+    padding: 5.625rem 2.5rem;
+    
+    .works-list-img {
+      padding-top: 0;
+    }
+  }
+  .works-list-text-wrap {
+    display: none;
+  }
+  .works-list-text-wrap-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 1.5rem;
+    padding: 0 1.5rem;
+    
+    .works-list-text {
+      border: 0;
+      padding-bottom: 1.25rem;
+    }
+    .works-list-text-btn {
+      margin-top: 0;
+    }
+    .home-works-card-tag {
+      justify-content: center;
+      
+      span {
+        background-color: $primary-color-200;
+        display: inline-flex;
+      }
+    }
+    h4 {
+      color: $primary-color-800;
+    }
+    p {
+      color: $primary-color-600;
+    }
+  }
+}
+/*------------------------------------------*/
+.server-list-wrap {
+  background-image: 
+    url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/homepage-services-bg.png");
+  background-position: center;
+  padding: 7.5rem 0;
+}
+.server-list {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 5rem 0;
+}
+.server-list > li {
+  background-image: 
+    url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/service-item-bg.png");
+  padding: 5rem 0;
+  text-align: center;
+  width: 19.125rem;
+  border-radius: 1rem;
+}
+.server-list > li > h4 {
+  color: $primary-color-50;
+  margin-top: 1.5rem;
+}
+.server-list-text-btn {
+  text-align: center;
+  
+  .link-btn-lg {
+    margin-top: 2.5rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  .server-list-wrap {
+    padding: 5rem 0;
+    
+    .link-btn-lg {
+      margin-bottom: 0;
+    }
+  }
+  .server-list {
+    margin: 2.5rem 0;
+    flex-direction: column;
+    align-items: center;
+    
+    li > h4 {
+      font-size: $font-size-5;
+    }
+  }
+}
+/*------------------------------------------*/
+.article-list-wrap {
+  padding: 7.5rem 19.5rem;
+}
+.article-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  gap: 1.5rem
+}
+.article-list > li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 26rem;
+}
+.article-list-img {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  
+  img {
+    @extend .card-img;
+  }
+  
+  &:hover img {
+    transform: scale(1.2, 1.2);
+  }
+}
+.article-list-text, .article-list-card {
+  padding: 0 0.5rem;
+}
+.article-list-text {
+  flex-grow: 1;
+}
+.article-list-card{
+  display: flex;
+  justify-content: space-between;
+  
+  p {
+    color: $primary-color-600;
+  }
+}
+.article-tag {
+  @extend .tag-span;
+}
+.article-list-page-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+  gap: 1rem
+}
+.article-list-footer > .link-btn-lg {
+  display: none;
+}
+
+@media (max-width: 1400px) {
+  .article-list-wrap {
+    padding: 5rem 0.75rem;
+  }
+}
+@media (max-width: 768px) {
+  .article-list {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2.5rem;
+    gap: 3rem;
+  }
+  .article-list > li {
+    width: 100%;
+  }
+  .article-list-page-btn {
+    display: none;
+  }
+  .article-list-footer  {
+    display: flex;
+    justify-content: center;
+    
+    .link-btn-lg {
+      display: block;
+      margin-top: 2.5rem;
+    }
+  }
+}

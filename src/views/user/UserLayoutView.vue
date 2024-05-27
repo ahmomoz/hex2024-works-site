@@ -3,11 +3,24 @@
     <a href="#" class="logo-img">
       <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/2f8d8c7a6133b448ecff5bf0a3d282b87b7c6a7e/2024%20web-camp/logo.svg" alt="logo">
     </a>
-    <a href="#" class="hamburger-list-icon"><img src="https://i.imgur.com/mW0FaCA.png" alt="list-icon"></a>
+    <transition>
+      <a href="#" class="hamburger-list-icon"
+        @click.prevent="mediaLinkActive =! mediaLinkActive"
+        v-show="!mediaLinkActive">
+        <img src="https://i.imgur.com/mW0FaCA.png" alt="hamburger-list-icon">
+      </a>
+    </transition>
+    <transition>
+      <a href="#" class="cancle-list-icon"
+        @click.prevent="mediaLinkActive =! mediaLinkActive"
+        v-show="mediaLinkActive">
+        <img src="https://i.imgur.com/oD1wN6h.png" alt="cancle-list-icon">
+      </a>
+    </transition>
     <nav class="header-nav">
       <ul class="link-wrap">
-        <li>
-          <a href="#">首頁</a>
+        <li :class="{ 'nav-active' : $route.path === '/' }">
+          <RouterLink to="/">首頁</RouterLink>
           <span class="nav-list-top-left">
             <img src="https://i.imgur.com/ni1GuZi.png"
                 alt="top-left-icon">
@@ -25,8 +38,8 @@
                 alt="buttom-right-icon">
           </span>
         </li>
-        <li class="nav-active">
-          <a href="#">作品集</a>
+        <li :class="{ 'nav-active' : $route.path === '/portfolio' }">
+          <RouterLink to="/portfolio">作品集</RouterLink>
           <span class="nav-list-top-left">
             <img src="https://i.imgur.com/ni1GuZi.png"
                 alt="top-left-icon">
@@ -44,8 +57,8 @@
                 alt="buttom-right-icon">
           </span>
         </li>
-        <li>
-          <a href="#">服務項目</a>
+        <li :class="{ 'nav-active' : $route.path === '/service' }">
+          <RouterLink to="/service">服務項目</RouterLink>
           <span class="nav-list-top-left">
             <img src="https://i.imgur.com/ni1GuZi.png"
                 alt="top-left-icon">
@@ -103,6 +116,111 @@
         </li>
       </ul>
     </nav>
+    <transition>
+      <ul class="media-link-wrap" v-show="mediaLinkActive">
+        <li :class="{ 'nav-active' : $route.path === '/' }">
+          <RouterLink to="/" @click="closeMenu">
+            首頁
+          </RouterLink>
+          <span class="nav-list-top-left">
+            <img src="https://i.imgur.com/ni1GuZi.png"
+                alt="top-left-icon">
+          </span>
+          <span class="nav-list-top-right">
+            <img src="https://i.imgur.com/Fb8fW14.png"
+                alt="top-right-icon">
+          </span>
+          <span class="nav-list-bottom-left">
+            <img src="https://i.imgur.com/AU1fMFX.png"
+                alt="buttom-left-icon">
+          </span>
+          <span class="nav-list-bottom-right">
+            <img src="https://i.imgur.com/2HKFkrv.png"
+                alt="buttom-right-icon">
+          </span>
+        </li>
+        <li :class="{ 'nav-active' : $route.path === '/portfolio' }">
+          <RouterLink to="/portfolio" @click="closeMenu">
+            作品集
+          </RouterLink>
+          <span class="nav-list-top-left">
+            <img src="https://i.imgur.com/ni1GuZi.png"
+                alt="top-left-icon">
+          </span>
+          <span class="nav-list-top-right">
+            <img src="https://i.imgur.com/Fb8fW14.png"
+                alt="top-right-icon">
+          </span>
+          <span class="nav-list-bottom-left">
+            <img src="https://i.imgur.com/AU1fMFX.png"
+                alt="buttom-left-icon">
+          </span>
+          <span class="nav-list-bottom-right">
+            <img src="https://i.imgur.com/2HKFkrv.png"
+                alt="buttom-right-icon">
+          </span>
+        </li>
+        <li :class="{ 'nav-active' : $route.path === '/service' }">
+          <RouterLink to="/service" @click="closeMenu">
+            服務項目
+          </RouterLink>
+          <span class="nav-list-top-left">
+            <img src="https://i.imgur.com/ni1GuZi.png"
+                alt="top-left-icon">
+          </span>
+          <span class="nav-list-top-right">
+            <img src="https://i.imgur.com/Fb8fW14.png"
+                alt="top-right-icon">
+          </span>
+          <span class="nav-list-bottom-left">
+            <img src="https://i.imgur.com/AU1fMFX.png"
+                alt="buttom-left-icon">
+          </span>
+          <span class="nav-list-bottom-right">
+            <img src="https://i.imgur.com/2HKFkrv.png"
+                alt="buttom-right-icon">
+          </span>
+        </li>
+        <li>
+          <a href="#">部落格</a>
+          <span class="nav-list-top-left">
+            <img src="https://i.imgur.com/ni1GuZi.png"
+                alt="top-left-icon">
+          </span>
+          <span class="nav-list-top-right">
+            <img src="https://i.imgur.com/Fb8fW14.png"
+                alt="top-right-icon">
+          </span>
+          <span class="nav-list-bottom-left">
+            <img src="https://i.imgur.com/AU1fMFX.png"
+                alt="buttom-left-icon">
+          </span>
+          <span class="nav-list-bottom-right">
+            <img src="https://i.imgur.com/2HKFkrv.png"
+                alt="buttom-right-icon">
+          </span>
+        </li>
+        <li>
+          <a href="#">聯絡我</a>
+          <span class="nav-list-top-left">
+            <img src="https://i.imgur.com/ni1GuZi.png"
+                alt="top-left-icon">
+          </span>
+          <span class="nav-list-top-right">
+            <img src="https://i.imgur.com/Fb8fW14.png"
+                alt="top-right-icon">
+          </span>
+          <span class="nav-list-bottom-left">
+            <img src="https://i.imgur.com/AU1fMFX.png"
+                alt="buttom-left-icon">
+          </span>
+          <span class="nav-list-bottom-right">
+            <img src="https://i.imgur.com/2HKFkrv.png"
+                alt="buttom-right-icon">
+          </span>
+        </li>
+      </ul>
+    </transition>
   </header>
   <RouterView />
   <footer>
@@ -137,9 +255,29 @@
       </li>
     </ul>
   </footer>
+  <transition name="fade">
+    <div class="overlay" v-show="mediaLinkActive"
+      @click="closeMenu"></div>
+  </transition>
 </template>
 
 <script>
+export default {
+  data () {
+    return {
+      mediaLinkActive: false
+    }
+  },
+  methods: {
+    closeMenu () {
+      this.mediaLinkActive = false
+    }
+  },
+  watch: {
+  },
+  mounted () {
+  }
+}
 </script>
 
 <style scoped>

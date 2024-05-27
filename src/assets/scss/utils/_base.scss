@@ -17,50 +17,37 @@ $font-size-4: 1.75rem; //28
 $font-size-5: 1.5rem; //24
 $font-size-6: 1.25rem; //20
 
-.card-img {
-  border-radius: 0.5rem;
-}
-.page-list {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  li {
-    display: flex;
-    align-items: center;
-  }
-  li > a {
-    font-size: 1.5rem;
-    color: $primary-color-700;
-    background-color: $primary-color-50;
-    text-align: center;
-    border-radius: 0.25rem;
-    padding: 0.125rem 0.813rem;
-    &:hover {
-      color: $primary-color-50;
-      background-color: $primary-color-800;
-      transition: all 0.4s ease-in-out
-    }
-    &.page-active {
-      color: $primary-color-50;
-      background-color: $primary-color-800;
-    }
-  }
-}
-
 h1 {
-  font-size: $font-size-5;
-  color: $primary-color-800;
-  line-height: 1.8;
+  font-size: $font-size-1;
+  color: $primary-color-700;
+  line-height: 2;
+  font-weight: 600;
 }
-h2 {
+h3 {
+  font-size: $font-size-3; 
+  font-weight: 600;
+  line-height: 1.6;
+}
+h4 {
   font-size: $font-size-4; 
   font-weight: 700;
   line-height: 1.2;
 }
-h3 {
+h5 {
+  font-size: $font-size-5;
+  color: $primary-color-800;
+  line-height: 1.8;
+}
+h6 {
+  font-size: $font-size-6;
+  color: $primary-color-700;
+  font-weight: 700;
+  line-height: 1.5;
+}
+h7 {
   color: $primary-color-600;
 }
-h3, p, span, a { 
+h7, p, span, a { 
   line-height: 1.5;
 }
 p {
@@ -73,16 +60,13 @@ a {
   text-decoration: none;
   color: $primary-color-900;
 }
-.nav-list-top-left, .nav-list-top-right {
-  top: -0.5rem;
-}
-.nav-list-bottom-left, .nav-list-bottom-right {
-  bottom: -0.5rem;
-}
-.nav-list-top-left, .nav-list-bottom-left {
-  left: -0.25rem;
-}
-.nav-list-top-right, .nav-list-bottom-right {
-  right: -0.25rem;
-}
 
+@media (max-width: 1400px) {
+  h3 {
+    font-size: $font-size-5;
+  }
+  
+  h4 {
+    font-size: $font-size-6;
+  }
+}
