@@ -37,9 +37,21 @@
   </section>
   <main class="works-list-container">
     <div class="list-header">
-      <span><img src="https://i.imgur.com/KjAiV0z.png" alt="ling-left"></span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg"
+          width="100" height="7" viewBox="0 0 100 7" fill="none">
+          <circle cx="3" cy="3.5" r="3" fill="#C1C1C1"/>
+          <path d="M6 3.5H100" stroke="#C1C1C1"/>
+        </svg>
+      </span>
       <h3>作品介紹</h3>
-      <span><img src="https://i.imgur.com/5WOoWAM.png" alt="ling-right"></span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg"
+          width="100" height="7" viewBox="0 0 100 7" fill="none">
+          <circle cx="97" cy="3.5" r="3" transform="rotate(-180 97 3.5)" fill="#C1C1C1"/>
+          <path d="M94 3.5L-1.01328e-06 3.49999" stroke="#C1C1C1"/>
+          </svg>
+      </span>
     </div>
     <div class="works-list-wrap">
       <div class="works-list">
@@ -156,9 +168,21 @@
   </main>
   <section class="server-list-wrap">
     <div class="list-header">
-      <span><img src="https://i.imgur.com/KjAiV0z.png" alt="ling-left"></span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg"
+          width="100" height="7" viewBox="0 0 100 7" fill="none">
+          <circle cx="3" cy="3.5" r="3" fill="#C1C1C1"/>
+          <path d="M6 3.5H100" stroke="#C1C1C1"/>
+        </svg>
+      </span>
       <h3>服務項目</h3>
-      <span><img src="https://i.imgur.com/5WOoWAM.png" alt="ling-right"></span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg"
+          width="100" height="7" viewBox="0 0 100 7" fill="none">
+          <circle cx="97" cy="3.5" r="3" transform="rotate(-180 97 3.5)" fill="#C1C1C1"/>
+          <path d="M94 3.5L-1.01328e-06 3.49999" stroke="#C1C1C1"/>
+          </svg>
+      </span>
     </div>
     <ul class="server-list">
       <li>
@@ -180,59 +204,77 @@
     </ul>
     <div class="server-list-text-btn">
       <h4>想要合作或瞭解更多？</h4>
-      <a href="#" class="link-btn-lg">詳細內容與合作流程
+      <Router-link to="/service" class="link-btn-lg">詳細內容與合作流程
         <span class="material-symbols-outlined">arrow_forward</span>
-      </a>
+      </Router-link>
     </div>
   </section>
   <section class="article-list-wrap">
     <div class="list-header">
-      <span><img src="https://i.imgur.com/KjAiV0z.png" alt="ling-left"></span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg"
+          width="100" height="7" viewBox="0 0 100 7" fill="none">
+          <circle cx="3" cy="3.5" r="3" fill="#C1C1C1"/>
+          <path d="M6 3.5H100" stroke="#C1C1C1"/>
+        </svg>
+      </span>
       <h3>精選文章</h3>
-      <span><img src="https://i.imgur.com/5WOoWAM.png" alt="ling-right"></span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg"
+          width="100" height="7" viewBox="0 0 100 7" fill="none">
+          <circle cx="97" cy="3.5" r="3" transform="rotate(-180 97 3.5)" fill="#C1C1C1"/>
+          <path d="M94 3.5L-1.01328e-06 3.49999" stroke="#C1C1C1"/>
+          </svg>
+      </span>
     </div>
     <ul class="article-list">
       <li>
-        <div class="article-list-img">
-          <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/article-image1.png" alt="article-image1">
+        <RouterLink class="article-card" :to=" `/blog/UIUX-news`" exact>
+          <div class="article-card-header">
+            <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/article-image1.png" alt="article-image1">
+            </div>
+          <div class="article-card-body">
+            <h6>Vision Pro 登場！Vision Pro UI/UX 設計重點大公開 (上)</h6>
           </div>
-        <div class="article-list-text">
-          <h6>Vision Pro 登場！Vision Pro UI/UX 設計重點大公開 (上)</h6>
-        </div>
-        <div class="article-list-card">
-          <ul class="article-tag">
-            <li><span>UI/UX 新知</span></li>
-          </ul>
-          <p>2024/02/10</p>
-        </div>
+          <div class="article-card-footer">
+            <ul class="article-tag">
+              <li><span>UI/UX 新知</span></li>
+            </ul>
+            <p>2024/02/10</p>
+          </div>
+        </RouterLink>
       </li>
       <li>
-        <div class="article-list-img">
-          <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/article-image2.png" alt="article-image2">
-        </div>
-        <div class="article-list-text">
-          <h6>給設計師和工程師的 Figma-Dev Mode 開發模式使用指南 (下)</h6>
-        </div>
-        <div class="article-list-card">
-          <ul class="article-tag">
-            <li><span>UI/UX 新知</span></li>
-          </ul>
-          <p>2023/11/20</p>
-        </div>
+        <RouterLink class="article-card" :to=" `/blog/UIUX-news`" exact>
+          <div class="article-card-header">
+            <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/article-image2.png" alt="article-image2">
+          </div>
+          <div class="article-card-body">
+            <h6>給設計師和工程師的 Figma-Dev Mode 開發模式使用指南 (下)</h6>
+          </div>
+          <div class="article-card-footer">
+            <ul class="article-tag">
+              <li><span>UI/UX 新知</span></li>
+            </ul>
+            <p>2023/11/20</p>
+          </div>
+        </RouterLink>
       </li>
       <li>
-        <div class="article-list-img">
-          <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/article-image3.png" alt="article-image3">
-        </div>
-        <div class="article-list-text">
-          <h6>給設計師和工程師的 Figma-Dev Mode 開發模式使用指南 (上)</h6>
-        </div>
-        <div class="article-list-card">
-          <ul class="article-tag">
-            <li><span>UI/UX 新知</span></li>
-          </ul>
-          <p>2023/10/18</p>
-        </div>
+        <RouterLink class="article-card" :to=" `/blog/UIUX-news`" exact>
+          <div class="article-card-header">
+            <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/article-image3.png" alt="article-image3">
+          </div>
+          <div class="article-card-body">
+            <h6>給設計師和工程師的 Figma-Dev Mode 開發模式使用指南 (上)</h6>
+          </div>
+          <div class="article-card-footer">
+            <ul class="article-tag">
+              <li><span>UI/UX 新知</span></li>
+            </ul>
+            <p>2023/10/18</p>
+          </div>
+        </RouterLink>
       </li>
     </ul>
     <div class="article-list-footer">

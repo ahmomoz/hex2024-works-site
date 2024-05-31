@@ -18,6 +18,21 @@ const routes = [
         path: 'service',
         name: '服務項目',
         component: () => import('@/views/user/UserServiceView.vue')
+      },
+      {
+        path: 'blog',
+        name: '部落格',
+        component: () => import('@/views/user/UserBlogView.vue')
+      },
+      {
+        path: 'blog/:id',
+        name: '部落格單一內文頁面',
+        component: () => import('@/views/user/UserBlogContentView.vue')
+      },
+      {
+        path: 'about',
+        name: '聯絡我',
+        component: () => import('@/views/user/UserAboutView.vue')
       }
     ]
   }

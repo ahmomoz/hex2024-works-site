@@ -1,0 +1,167 @@
+.blog-content-list-container {
+  @extend .blog-list-container;
+  margin-bottom: 5rem;
+}
+.blog-content-wrap {
+  width: 53.5rem;
+  margin-right: 8.375rem;
+
+  h3, h5 {
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  h3, h5, p {
+    color: $primary-color-700;
+  }
+}
+.blog-content-wrap > nav {
+  display: flex;
+  gap: 0.5rem;
+
+  a, p {
+    color: $primary-color-500;
+  }
+}
+.blog-content-title {
+  margin-top: 2.5rem;
+  margin-bottom: 4rem;
+  text-align: center;
+
+  h5 {
+    font-weight: 400;
+  }
+
+  h3 {
+    margin-bottom: 1.5rem;
+  }
+}
+.blog-content-body {
+  h5 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+  }
+}
+.author-text{
+  color: $primary-color-600;
+  font-size: 1rem;
+  margin-top: 2.5rem;
+}
+.img-list {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+
+  li {
+    width: 26rem;
+    text-align: center;
+    
+    p {
+      color: $primary-color-600;
+      margin-top: 0.5rem;
+    }
+  }
+}
+@media (max-width: 1400px) {
+  .blog-content-list-container {
+    margin-top: 0;
+  }
+}
+@media (max-width: 1200px) {
+  .blog-content-wrap {
+    width: 100%;
+    margin-right: 0;
+  }
+  .content-wrap {
+    padding: 0rem 0.75rem;
+  }
+}
+@media (max-width: 768px) {
+  .content-wrap {
+    padding: 5rem 0.75rem;
+
+    nav {
+      justify-content: space-between;
+    }
+
+    nav > p {
+      display: none;
+    }
+  }
+  .top-nav {
+    top: 4rem;
+  }
+  .blog-content-list-container {
+    margin: 4rem 0 1.5rem;
+  }
+  .blog-content-title {
+    margin: 1rem 0 1.5rem;
+
+    h5 {
+      font-size: 1rem;
+    }
+  }
+  .blog-content-body {
+    h5 {
+      margin-top: 2rem;
+    }
+  }
+  .img-list {
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 2rem;
+
+    li, li > img {
+      width: 100%;
+    }
+  }
+  .img-list > li > p {
+    margin-top: 0.5rem;
+  }
+  .author-text {
+    margin-top: 2rem;
+  }
+}
+/*------------------------------------------*/
+.blog-content-list-footer {
+  border-top: 0.063rem solid $primary-color-400;
+  width: 81rem;
+  margin: 0 auto;
+
+  h4 {
+    margin: 5rem 0 2.5rem;
+  }
+}
+.blog-content-list-footer > .article-list {
+  display: flex;
+  justify-content: start;
+  margin-top: 0;
+}
+@media (max-width: 1800px) {
+  .blog-content-list-footer {
+    width: 100%;
+  }
+}
+@media (max-width: 1200px) {
+  .blog-content-list-footer {
+    padding: 0 1.406rem;
+
+    h4 {
+      font-size: 1.5rem;
+      text-align: center;
+      margin: 2.5rem 0;
+    }
+
+    li {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

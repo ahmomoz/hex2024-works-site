@@ -20,7 +20,9 @@
     <nav class="header-nav">
       <ul class="link-wrap">
         <li :class="{ 'nav-active' : $route.path === '/' }">
-          <RouterLink to="/">首頁</RouterLink>
+          <RouterLink to="/">
+            首頁
+          </RouterLink>
           <span class="nav-list-top-left">
             <img src="https://i.imgur.com/ni1GuZi.png"
                 alt="top-left-icon">
@@ -39,7 +41,9 @@
           </span>
         </li>
         <li :class="{ 'nav-active' : $route.path === '/portfolio' }">
-          <RouterLink to="/portfolio">作品集</RouterLink>
+          <RouterLink to="/portfolio">
+            作品集
+          </RouterLink>
           <span class="nav-list-top-left">
             <img src="https://i.imgur.com/ni1GuZi.png"
                 alt="top-left-icon">
@@ -58,7 +62,9 @@
           </span>
         </li>
         <li :class="{ 'nav-active' : $route.path === '/service' }">
-          <RouterLink to="/service">服務項目</RouterLink>
+          <RouterLink to="/service">
+            服務項目
+          </RouterLink>
           <span class="nav-list-top-left">
             <img src="https://i.imgur.com/ni1GuZi.png"
                 alt="top-left-icon">
@@ -76,8 +82,10 @@
                 alt="buttom-right-icon">
           </span>
         </li>
-        <li>
-          <a href="#">部落格</a>
+        <li :class="{ 'nav-active' : $route.path === '/blog' || $route.path === '/blog/UIUX-news'}">
+          <RouterLink to="/blog">
+            部落格
+          </RouterLink>
           <span class="nav-list-top-left">
             <img src="https://i.imgur.com/ni1GuZi.png"
                 alt="top-left-icon">
@@ -95,8 +103,10 @@
                 alt="buttom-right-icon">
           </span>
         </li>
-        <li>
-          <a href="#">聯絡我</a>
+        <li :class="{ 'nav-active' : $route.path === '/ablot'}">
+          <RouterLink to="/about">
+            聯絡我
+          </RouterLink>
           <span class="nav-list-top-left">
             <img src="https://i.imgur.com/ni1GuZi.png"
                 alt="top-left-icon">
@@ -181,8 +191,10 @@
                 alt="buttom-right-icon">
           </span>
         </li>
-        <li>
-          <a href="#">部落格</a>
+        <li :class="{ 'nav-active' : $route.path === '/blog' }">
+          <RouterLink to="/blog" @click="closeMenu">
+            部落格
+          </RouterLink>
           <span class="nav-list-top-left">
             <img src="https://i.imgur.com/ni1GuZi.png"
                 alt="top-left-icon">
@@ -200,8 +212,10 @@
                 alt="buttom-right-icon">
           </span>
         </li>
-        <li>
-          <a href="#">聯絡我</a>
+        <li :class="{ 'nav-active' : $route.path === '/about'}">
+          <RouterLink to="/about" @click="closeMenu">
+            聯絡我
+          </RouterLink>
           <span class="nav-list-top-left">
             <img src="https://i.imgur.com/ni1GuZi.png"
                 alt="top-left-icon">
@@ -272,10 +286,6 @@ export default {
     closeMenu () {
       this.mediaLinkActive = false
     }
-  },
-  watch: {
-  },
-  mounted () {
   }
 }
 </script>

@@ -2,11 +2,19 @@
   <section class="service-server-list-wrap">
     <div class="service-list-header">
       <span>
-        <img src="https://i.imgur.com/KjAiV0z.png" alt="ling-left">
+        <svg xmlns="http://www.w3.org/2000/svg"
+          width="100" height="7" viewBox="0 0 100 7" fill="none">
+          <circle cx="3" cy="3.5" r="3" fill="#C1C1C1"/>
+          <path d="M6 3.5H100" stroke="#C1C1C1"/>
+        </svg>
       </span>
       <h3>服務項目</h3>
       <span>
-        <img src="https://i.imgur.com/5WOoWAM.png" alt="ling-right">
+        <svg xmlns="http://www.w3.org/2000/svg"
+          width="100" height="7" viewBox="0 0 100 7" fill="none">
+          <circle cx="97" cy="3.5" r="3" transform="rotate(-180 97 3.5)" fill="#C1C1C1"/>
+          <path d="M94 3.5L-1.01328e-06 3.49999" stroke="#C1C1C1"/>
+          </svg>
       </span>
     </div>
     <ul class="service-server-list">
@@ -31,11 +39,19 @@
   <section class="service-process-wrap">
     <div class="service-list-header">
       <span>
-        <img src="https://i.imgur.com/KjAiV0z.png" alt="ling-left">
+        <svg xmlns="http://www.w3.org/2000/svg"
+          width="100" height="7" viewBox="0 0 100 7" fill="none">
+          <circle cx="3" cy="3.5" r="3" fill="#C1C1C1"/>
+          <path d="M6 3.5H100" stroke="#C1C1C1"/>
+        </svg>
       </span>
       <h3>服務流程</h3>
       <span>
-        <img src="https://i.imgur.com/5WOoWAM.png" alt="ling-right">
+        <svg xmlns="http://www.w3.org/2000/svg"
+          width="100" height="7" viewBox="0 0 100 7" fill="none">
+          <circle cx="97" cy="3.5" r="3" transform="rotate(-180 97 3.5)" fill="#C1C1C1"/>
+          <path d="M94 3.5L-1.01328e-06 3.49999" stroke="#C1C1C1"/>
+          </svg>
       </span>
     </div>
     <ul class="process-container">
@@ -126,11 +142,19 @@
   <section class="service-price-wrap">
     <div class="service-list-header">
       <span>
-        <img src="https://i.imgur.com/KjAiV0z.png" alt="ling-left">
+        <svg xmlns="http://www.w3.org/2000/svg"
+          width="100" height="7" viewBox="0 0 100 7" fill="none">
+          <circle cx="3" cy="3.5" r="3" fill="#C1C1C1"/>
+          <path d="M6 3.5H100" stroke="#C1C1C1"/>
+        </svg>
       </span>
       <h3>價格表</h3>
       <span>
-        <img src="https://i.imgur.com/5WOoWAM.png" alt="ling-right">
+        <svg xmlns="http://www.w3.org/2000/svg"
+          width="100" height="7" viewBox="0 0 100 7" fill="none">
+          <circle cx="97" cy="3.5" r="3" transform="rotate(-180 97 3.5)" fill="#C1C1C1"/>
+          <path d="M94 3.5L-1.01328e-06 3.49999" stroke="#C1C1C1"/>
+          </svg>
       </span>
     </div>
     <ul class="price-container">
@@ -160,11 +184,19 @@
   <section class="service-sample-wrap">
     <div class="service-list-header">
       <span>
-        <img src="https://i.imgur.com/KjAiV0z.png" alt="ling-left">
+        <svg xmlns="http://www.w3.org/2000/svg"
+          width="100" height="7" viewBox="0 0 100 7" fill="none">
+          <circle cx="3" cy="3.5" r="3" fill="#C1C1C1"/>
+          <path d="M6 3.5H100" stroke="#C1C1C1"/>
+        </svg>
       </span>
       <h3>客戶案例</h3>
       <span>
-        <img src="https://i.imgur.com/5WOoWAM.png" alt="ling-right">
+        <svg xmlns="http://www.w3.org/2000/svg"
+          width="100" height="7" viewBox="0 0 100 7" fill="none">
+          <circle cx="97" cy="3.5" r="3" transform="rotate(-180 97 3.5)" fill="#C1C1C1"/>
+          <path d="M94 3.5L-1.01328e-06 3.49999" stroke="#C1C1C1"/>
+          </svg>
       </span>
     </div>
     <ul class="works-card-wrap">
@@ -229,11 +261,19 @@
   <section class="service-QA-wrap">
     <div class="service-list-header">
       <span>
-        <img src="https://i.imgur.com/KjAiV0z.png" alt="ling-left">
+        <svg xmlns="http://www.w3.org/2000/svg"
+          width="100" height="7" viewBox="0 0 100 7" fill="none">
+          <circle cx="3" cy="3.5" r="3" fill="#C1C1C1"/>
+          <path d="M6 3.5H100" stroke="#C1C1C1"/>
+        </svg>
       </span>
       <h3>常見問題</h3>
       <span>
-        <img src="https://i.imgur.com/5WOoWAM.png" alt="ling-right">
+        <svg xmlns="http://www.w3.org/2000/svg"
+          width="100" height="7" viewBox="0 0 100 7" fill="none">
+          <circle cx="97" cy="3.5" r="3" transform="rotate(-180 97 3.5)" fill="#C1C1C1"/>
+          <path d="M94 3.5L-1.01328e-06 3.49999" stroke="#C1C1C1"/>
+          </svg>
       </span>
     </div>
     <ul class="service-QA-container">
