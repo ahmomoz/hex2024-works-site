@@ -358,13 +358,6 @@ export default {
     closeModal () {
       this.modalActive = false
     }
-  },
-  mounted () {
-    document.addEventListener('click', () => {
-      if (event.target === document.querySelectorAll('works-card')) {
-        this.closeModal()
-      }
-    })
   }
 }
 </script>

@@ -125,7 +125,7 @@
     </ul>
   </main>
   <div class="modal" v-if="modalActive"
-    @click.self="closemodal">
+    @click.self="closeModal">
     <div class="modal-demo">
       <div class="modal-header">
         <a href="#">
@@ -187,13 +187,6 @@ export default {
     closeModal () {
       this.modalActive = false
     }
-  },
-  mounted () {
-    document.addEventListener('click', () => {
-      if (event.target === document.querySelectorAll('works-card')) {
-        this.closeModal()
-      }
-    })
   }
 }
 </script>
