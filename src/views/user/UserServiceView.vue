@@ -200,7 +200,7 @@
       </span>
     </div>
     <ul class="works-card-wrap">
-      <li class="works-card" @click.prevent="openModel">
+      <li class="works-card" @click.prevent="openModal">
         <div class="works-card-img">
           <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/work-image4.png" alt="work4-img">
         </div>
@@ -214,7 +214,7 @@
           <li><span>Wix</span></li>
         </ul>
       </li>
-      <li class="works-card" @click.prevent="openModel">
+      <li class="works-card" @click.prevent="openModal">
         <div class="works-card-img">
           <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/work-image6.png" alt="work6-img">
         </div>
@@ -228,7 +228,7 @@
           <li><span>網路電商</span></li>
         </ul>
       </li>
-      <li class="works-card" @click.prevent="openModel">
+      <li class="works-card" @click.prevent="openModal">
         <div class="works-card-img">
           <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/work-image5.png" alt="work5-img">
         </div>
@@ -295,45 +295,45 @@
       </li>
     </ul>
   </section>
-  <div class="model" v-if="modelActive"
-    @click.self="closeModel">
-    <div class="model-demo">
-      <div class="model-header">
+  <div class="modal" v-if="modalActive"
+    @click.self="closeModal">
+    <div class="modal-demo">
+      <div class="modal-header">
         <a href="#">
           <span class="material-symbols-outlined"
-            @click.prevent="closeModel">
+            @click.prevent="closeModal">
             close
           </span>
         </a>
       </div>
-      <div class="model-description">
-        <div class="model-title">
+      <div class="modal-description">
+        <div class="modal-title">
           <h4>星際旅行訂票平台</h4>
           <p>悠遊宇宙的夢想，從這裡開始實現</p>
         </div>
-        <div class="model-text">
-          <div class="model-intro">
+        <div class="modal-text">
+          <div class="modal-intro">
             <p>
               STAR TRAVEL 為 KK 公司宇宙旅行的購票網站。<br>
               主要從地球出發，目的地包含月球、火星、水星、木星；未來太空轉運站建置完畢，將再擴增目的地土星和金星。
             </p>
           </div>
-          <div class="model-tag">
+          <div class="modal-tag">
             <p>設計原則：宇宙旅行、深色背景、強烈視覺效果</p>
             <p>開發方式：Bootstrap、Javascript、RWD</p>
           </div>
         </div>
       </div>
-      <div class="model-main-content">
-        <div class="model-main">
-          <div class="model-main-img">
+      <div class="modal-main-content">
+        <div class="modal-main">
+          <div class="modal-main-img">
             <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/modal-image1.png" alt="STARTRAVEL-main-image">
           </div>
           <h5>主視覺</h5>
           <p>可直接設定日期、起迄星球、張數，快速查詢可購買的票券。</p>
         </div>
-        <div class="model-feature">
-          <div class="model-feature-img">
+        <div class="modal-feature">
+          <div class="modal-feature-img">
             <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/modal-image2.png" alt="STARTRAVEL-feature-image">
           </div>
           <h5>推薦查詢</h5>
@@ -348,21 +348,21 @@
 export default {
   data () {
     return {
-      modelActive: false
+      modalActive: false
     }
   },
   methods: {
-    openModel () {
-      this.modelActive = true
+    openModal () {
+      this.modalActive = true
     },
-    closeModel () {
-      this.modelActive = false
+    closeModal () {
+      this.modalActive = false
     }
   },
   mounted () {
     document.addEventListener('click', () => {
       if (event.target === document.querySelectorAll('works-card')) {
-        this.closeModel()
+        this.closeModal()
       }
     })
   }

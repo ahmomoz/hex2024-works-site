@@ -159,7 +159,7 @@
   }
 }
 /*------------------------------------------*/
-.model {
+.modal {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -175,21 +175,21 @@
 .modal::-webkit-scrollbar {
   display: none; /* Chrome & Safari */
 }
-.model-demo {
+.modal-demo {
   background-color: $primary-color-50;
   border-radius: 1rem;
   width: 67.25rem;
   margin: 10% auto;
   box-shadow: 0px 4px 8px 0px #00000099;
 }
-.model-header {
+.modal-header {
   padding: 2rem 2.5rem 0 2.5rem;
   text-align: end;
 }
-.model-description {
+.modal-description {
   padding: 2.5rem 0;
 }
-.model-title {
+.modal-title {
   text-align: center;
 
   p {
@@ -197,21 +197,21 @@
     margin-top: 0.5rem;
   }
 }
-.model-text {
+.modal-text {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 3.5rem;
   margin-top: 2.5rem;
 }
-.model-intro {
+.modal-intro {
   width: 60%;
 
   p {
     color: $primary-color-800;
   }
 }
-.model-tag {
+.modal-tag {
   border-left: 0.063rem solid $primary-color-400;
   padding-left: 1.5rem;
 
@@ -219,7 +219,7 @@
     color: $primary-color-600;
   }
 }
-.model-main-content {
+.modal-main-content {
   background-color: $primary-color-100;
   display: flex;
   flex-direction: column;
@@ -239,7 +239,7 @@
     margin-top: 1rem;
   }
 }
-.model-main-img,.model-feature-img {
+.modal-main-img,.modal-feature-img {
   margin-bottom: 1.5rem;
 
   img {
@@ -247,6 +247,6 @@
     border-radius: 1.5rem;
   }
 }
-.model-feature {
+.modal-feature {
   margin-top: 3.5rem;
 }
