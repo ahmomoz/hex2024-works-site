@@ -46,6 +46,10 @@
 .blog-nav, .media-blog-nav {
   @include blog-nav;
 
+  li {
+    cursor: pointer;
+  }
+
   li:hover, .blog-nav-active,.media-blog-nav-active {
     color: $primary-color-800;
     border-bottom: 0.125rem solid $primary-color-800;
@@ -83,7 +87,7 @@
   .nav-fixed {
     position: fixed;
     top: 56px;
-    z-index: 999;
+    z-index: 11;
     background-color: $primary-color-100;
   }
 }

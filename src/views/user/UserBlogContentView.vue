@@ -2,11 +2,11 @@
   <div class="blog-list-wrap content-wrap">
     <nav class="media-blog-nav-wrap top-nav">
       <ul :class="['media-blog-nav', {'nav-fixed' : isFixed}]">
-        <li class="media-blog-nav-active">全部文章</li>
-        <li>UI/UX 新知</li>
-        <li>數位產品設計</li>
-        <li>平面設計</li>
-        <li>前端開發</li>
+        <li class="media-blog-nav-active" @click="toBlogPege">全部文章</li>
+        <li @click="toBlogPege">UI/UX 新知</li>
+        <li @click="toBlogPege">數位產品設計</li>
+        <li @click="toBlogPege">平面設計</li>
+        <li @click="toBlogPege">前端開發</li>
       </ul>
     </nav>
     <div class="blog-content-list-container">
@@ -56,11 +56,11 @@
       </main>
       <nav class="blog-nav-wrap">
         <ul class="blog-nav">
-          <li class="blog-nav-active">全部文章</li>
-          <li>UI/UX 新知</li>
-          <li>數位產品設計</li>
-          <li>平面設計</li>
-          <li>前端開發</li>
+          <li class="blog-nav-active" @click="toBlogPege">全部文章</li>
+          <li @click="toBlogPege">UI/UX 新知</li>
+          <li @click="toBlogPege">數位產品設計</li>
+          <li @click="toBlogPege">平面設計</li>
+          <li @click="toBlogPege">前端開發</li>
         </ul>
       </nav>
     </div>
@@ -120,6 +120,9 @@ export default {
       } else {
         this.isFixed = false
       }
+    },
+    toBlogPege () {
+      this.$router.push('/blog')
     }
   },
   mounted () {

@@ -33,7 +33,7 @@
   </section>
   <main class="works-container">
     <ul class="works-card-wrap">
-      <li class="works-card">
+      <li class="works-card" @click.prevent="openModel">
         <div class="works-card-img">
           <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/work-image1.png" alt="work1-img">
         </div>
@@ -47,7 +47,7 @@
           <li><span>Bootstap</span></li>
         </ul>
       </li>
-      <li class="works-card">
+      <li class="works-card" @click.prevent="openModel">
         <div class="works-card-img">
           <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/work-image2.png" alt="work2-img">
         </div>
@@ -61,7 +61,7 @@
           <li><span>React</span></li>
         </ul>
       </li>
-      <li class="works-card">
+      <li class="works-card" @click.prevent="openModel">
         <div class="works-card-img">
           <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/work-image3.png" alt="work3-img">
         </div>
@@ -75,7 +75,7 @@
           <li><span>ＷordPress</span></li>
         </ul>
       </li>
-      <li class="works-card">
+      <li class="works-card" @click.prevent="openModel">
         <div class="works-card-img">
           <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/work-image4.png" alt="work4-img">
         </div>
@@ -89,7 +89,7 @@
           <li><span>Wix</span></li>
         </ul>
       </li>
-      <li class="works-card">
+      <li class="works-card" @click.prevent="openModel">
         <div class="works-card-img">
           <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/work-image5.png" alt="work5-img">
         </div>
@@ -103,7 +103,7 @@
           <li><span>Vue</span></li>
         </ul>
       </li>
-      <li class="works-card">
+      <li class="works-card" @click.prevent="openModel">
         <div class="works-card-img">
           <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/work-image6.png" alt="work6-img">
         </div>
@@ -124,11 +124,13 @@
       <li><a href="#">3</a></li>
     </ul>
   </main>
-  <div class="model" :class="{ 'model-active' : modelActive }">
+  <div class="model" v-if="modelActive"
+    @click.self="closeModel">
     <div class="model-demo">
       <div class="model-header">
         <a href="#">
-          <span class="material-symbols-outlined">
+          <span class="material-symbols-outlined"
+            @click.prevent="closeModel">
             close
           </span>
         </a>
@@ -181,7 +183,17 @@ export default {
   methods: {
     openModel () {
       this.modelActive = true
+    },
+    closeModel () {
+      this.modelActive = false
     }
+  },
+  mounted () {
+    document.addEventListener('click', () => {
+      if (event.target === document.querySelectorAll('works-card')) {
+        this.closeModel()
+      }
+    })
   }
 }
 </script>

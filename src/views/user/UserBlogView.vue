@@ -24,16 +24,31 @@
     </div>
     <nav class="media-blog-nav-wrap">
       <ul :class="['media-blog-nav', {'nav-fixed' : isFixed}]">
-        <li class="media-blog-nav-active">全部文章</li>
-        <li>UI/UX 新知</li>
-        <li>數位產品設計</li>
-        <li>平面設計</li>
-        <li>前端開發</li>
+        <li :class="{'media-blog-nav-active' : category === ''}"
+            @click="category = ''">
+          全部文章
+        </li>
+        <li :class="{'media-blog-nav-active' : category === 'ui-ux'}"
+            @click="category = 'ui-ux'">
+          UI/UX 新知
+        </li>
+        <li :class="{'media-blog-nav-active' : category === 'digital-products'}"
+            @click="category = 'digital-products'">
+          數位產品設計
+        </li>
+        <li :class="{'media-blog-nav-active' : category === 'graphic-design'}"
+            @click="category = 'graphic-design'">
+          平面設計
+        </li>
+        <li :class="{'media-blog-nav-active' : category === 'front-end-development'}"
+            @click="category = 'front-end-development'">
+          前端開發
+        </li>
       </ul>
     </nav>
     <div class="blog-list-container">
       <ul class="blog-list">
-        <li>
+        <li v-if="category === '' || category === 'ui-ux'">
           <RouterLink class="blog-card" :to=" `/blog/UIUX-news`" exact>
             <div class="blog-card-header">
               <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/article-image1.png" alt="article-image1">
@@ -53,7 +68,7 @@
             </div>
           </RouterLink>
         </li>
-        <li>
+        <li v-if="category === '' || category === 'ui-ux'">
           <RouterLink class="blog-card" :to=" `/blog/UIUX-news`" exact>
             <div class="blog-card-header">
               <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/article-image2.png" alt="article-image2">
@@ -73,7 +88,7 @@
             </div>
           </RouterLink>
         </li>
-        <li>
+        <li v-if="category === '' || category === 'ui-ux'">
           <RouterLink class="blog-card" :to=" `/blog/UIUX-news`" exact>
             <div class="blog-card-header">
               <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/article-image3.png" alt="article-image3">
@@ -93,7 +108,7 @@
             </div>
           </RouterLink>
         </li>
-        <li>
+        <li v-if="category === '' || category === 'digital-products'">
           <RouterLink class="blog-card" :to=" `/blog/UIUX-news`" exact>
             <div class="blog-card-header">
               <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/article-image4.png" alt="article-image4">
@@ -112,7 +127,7 @@
             </div>
           </RouterLink>
         </li>
-        <li>
+        <li v-if="category === '' || category === 'digital-products'">
           <RouterLink class="blog-card" :to=" `/blog/UIUX-news`" exact>
             <div class="blog-card-header">
               <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/article-image5.png" alt="article-image5">
@@ -132,7 +147,7 @@
             </div>
           </RouterLink>
         </li>
-        <li>
+        <li v-if="category === '' || category === 'front-end-development'">
           <RouterLink class="blog-card" :to=" `/blog/UIUX-news`" exact>
             <div class="blog-card-header">
               <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/article-image6.png" alt="article-image6">
@@ -154,11 +169,26 @@
       </ul>
       <nav class="blog-nav-wrap">
         <ul class="blog-nav">
-          <li class="blog-nav-active">全部文章</li>
-          <li>UI/UX 新知</li>
-          <li>數位產品設計</li>
-          <li>平面設計</li>
-          <li>前端開發</li>
+          <li :class="{'blog-nav-active' : category === ''}"
+              @click="category = ''">
+            全部文章
+          </li>
+          <li :class="{'blog-nav-active' : category === 'ui-ux'}"
+              @click="category = 'ui-ux'">
+            UI/UX 新知
+          </li>
+          <li :class="{'blog-nav-active' : category === 'digital-products'}"
+              @click="category = 'digital-products'">
+            數位產品設計
+          </li>
+          <li :class="{'blog-nav-active' : category === 'graphic-design'}"
+              @click="category = 'graphic-design'">
+            平面設計
+          </li>
+          <li :class="{'blog-nav-active' : category === 'front-end-development'}"
+              @click="category = 'front-end-development'">
+            前端開發
+          </li>
         </ul>
       </nav>
     </div>
@@ -170,7 +200,8 @@ export default {
   data () {
     return {
       isFixed: false,
-      scrollPosition: 0
+      scrollPosition: 0,
+      category: ''
     }
   },
   methods: {

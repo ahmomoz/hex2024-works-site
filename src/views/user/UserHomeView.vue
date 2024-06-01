@@ -69,9 +69,11 @@
             </ul>
           </div>
           <div class="works-list-text-btn">
-            <a href="#" class="link-btn-lg">完整介紹
-              <span class="material-symbols-outlined">arrow_forward</span>
-            </a>
+            <Router-link to="/portfolio" class="link-btn-lg">完整介紹
+              <span class="material-symbols-outlined">
+                arrow_forward
+              </span>
+            </Router-link>
           </div>
         </div>
       </div>
@@ -79,16 +81,18 @@
         <div class="works-list-text">
           <h4>星際旅行訂票平台</h4>
           <p>悠遊宇宙的夢想，從這裡開始實現</p>
-          <ul class="works-card-tag">
+          <ul class="home-works-card-tag">
             <li><span>網頁設計</span></li>
             <li><span>響應式設計</span></li>
             <li><span>Bootstrap</span></li>
           </ul>
         </div>
         <div class="works-list-text-btn">
-          <a href="#" class="link-btn-lg">完整介紹
-            <span class="material-symbols-outlined">arrow_forward</span>
-          </a>
+          <Router-link to="/portfolio" class="link-btn-lg">完整介紹
+            <span class="material-symbols-outlined">
+              arrow_forward
+            </span>
+          </Router-link>
         </div>
       </div>
       <div class="works-list">
@@ -105,9 +109,11 @@
             </ul>
           </div>
           <div class="works-list-text-btn">
-            <a href="#" class="link-btn-lg">完整介紹
-              <span class="material-symbols-outlined">arrow_forward</span>
-            </a>
+            <Router-link to="/portfolio" class="link-btn-lg">完整介紹
+              <span class="material-symbols-outlined">
+                arrow_forward
+              </span>
+            </Router-link>
           </div>
         </div>
       </div>
@@ -122,9 +128,11 @@
           </ul>
         </div>
         <div class="works-list-text-btn">
-          <a href="#" class="link-btn-lg">完整介紹
-            <span class="material-symbols-outlined">arrow_forward</span>
-          </a>
+          <Router-link to="/portfolio" class="link-btn-lg">完整介紹
+            <span class="material-symbols-outlined">
+              arrow_forward
+            </span>
+          </Router-link>
         </div>
       </div>
       <div class="works-list">
@@ -142,9 +150,11 @@
             </ul>
           </div>
           <div class="works-list-text-btn">
-            <a href="#" class="link-btn-lg">完整介紹
-              <span class="material-symbols-outlined">arrow_forward</span>
-            </a>
+            <Router-link to="/portfolio" class="link-btn-lg">完整介紹
+              <span class="material-symbols-outlined">
+                arrow_forward
+              </span>
+            </Router-link>
           </div>
         </div>
       </div>
@@ -159,9 +169,11 @@
           </ul>
         </div>
         <div class="works-list-text-btn">
-          <a href="#" class="link-btn-lg">完整介紹
-            <span class="material-symbols-outlined">arrow_forward</span>
-          </a>
+          <Router-link to="/portfolio" class="link-btn-lg">完整介紹
+            <span class="material-symbols-outlined">
+              arrow_forward
+            </span>
+          </Router-link>
         </div>
       </div>
     </div>
@@ -227,7 +239,33 @@
           </svg>
       </span>
     </div>
-    <ul class="article-list">
+    <!--swiper start-->
+    <div class="article-swiper">
+      <ul class="article-list article-swiper-wrapper">
+        <li
+          v-for="(article, index) in articles"
+          :key="index"
+          :class="['article-swiper-slide', { 'swiper-active': index === activeSlide || index === activeSlide+1 || index === activeSlide+2  }]"
+        >
+          <Router-link class="article-card" :to="article.link" exact>
+            <div class="article-card-header">
+              <img :src="article.image" :alt="`article-image${index + 1}`">
+            </div>
+            <div class="article-card-body">
+              <h6>{{ article.title }}</h6>
+            </div>
+            <div class="article-card-footer">
+              <ul class="article-tag">
+                <li><span>{{ article.tag }}</span></li>
+              </ul>
+              <p>{{ article.date }}</p>
+            </div>
+          </Router-link>
+        </li>
+      </ul>
+    </div>
+    <!--swiper end-->
+    <ul class="article-list media-article-list">
       <li>
         <RouterLink class="article-card" :to=" `/blog/UIUX-news`" exact>
           <div class="article-card-header">
@@ -279,40 +317,110 @@
     </ul>
     <div class="article-list-footer">
       <div class="article-list-page-btn">
-        <a href="#">
+        <a href="#" @click.prevent="swiperSlideChange(0)">
           <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-            <circle cx="6" cy="6" r="6" fill="black"/>
+            <circle cx="6" cy="6" r="6"
+              :fill="activeSlide === 0 ? 'black' : '#E9E9E9'"/>
           </svg>
         </a>
-        <a href="#">
+        <a href="#" @click.prevent="swiperSlideChange(1)">
           <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-            <circle cx="6" cy="6" r="6" fill="#E9E9E9"/>
+            <circle cx="6" cy="6" r="6"
+              :fill="activeSlide === 1 ? 'black' : '#E9E9E9'"/>
           </svg>
         </a>
-        <a href="#">
+        <a href="#" @click.prevent="swiperSlideChange(2)">
           <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-            <circle cx="6" cy="6" r="6" fill="#E9E9E9"/>
+            <circle cx="6" cy="6" r="6"
+              :fill="activeSlide === 2 ? 'black' : '#E9E9E9'"/>
           </svg>
         </a>
-        <a href="#">
+        <a href="#" @click.prevent="swiperSlideChange(3)">
           <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-            <circle cx="6" cy="6" r="6" fill="#E9E9E9"/>
+            <circle cx="6" cy="6" r="6"
+              :fill="activeSlide === 3 ? 'black' : '#E9E9E9'"/>
           </svg>
         </a>
-        <a href="#">
+        <a href="#" @click.prevent="swiperSlideChange(4)">
           <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-            <circle cx="6" cy="6" r="6" fill="#E9E9E9"/>
+            <circle cx="6" cy="6" r="6"
+              :fill="activeSlide === 4 ? 'black' : '#E9E9E9'"/>
           </svg>
         </a>
       </div>
-      <a href="#" class="link-btn-lg">更多文章
+      <Router-link to="/blog" class="link-btn-lg">
+        更多文章
         <span class="material-symbols-outlined">arrow_forward</span>
-      </a>
+      </Router-link>
     </div>
   </section>
 </template>
 
 <script>
+export default {
+  data () {
+    return {
+      activeSlide: 0,
+      articles: [
+        {
+          link: '/blog/UIUX-news',
+          image: 'https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/article-image1.png',
+          title: 'Vision Pro 登場！Vision Pro UI/UX 設計重點大公開 (上)',
+          tag: 'UI/UX 新知',
+          date: '2024/02/10'
+        },
+        {
+          link: '/blog/UIUX-news',
+          image: 'https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/article-image2.png',
+          title: '給設計師和工程師的 Figma-Dev Mode 開發模式使用指南 (下)',
+          tag: 'UI/UX 新知',
+          date: '2023/11/20'
+        },
+        {
+          link: '/blog/UIUX-news',
+          image: 'https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/article-image3.png',
+          title: '給設計師和工程師的 Figma-Dev Mode 開發模式使用指南 (上)',
+          tag: 'UI/UX 新知',
+          date: '2023/10/18'
+        },
+        {
+          link: '/blog/UIUX-news',
+          image: 'https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/article-image4.png',
+          title: '虛擬實境 (VR) 介面設計對使用者沈浸感影響的研究',
+          tag: '數位產品設計',
+          date: '2023/09/20'
+        },
+        {
+          link: '/blog/UIUX-news',
+          image: 'https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/article-image5.png',
+          title: '想打到目標受眾？先讓設計師跟你都瞭解他們痛在哪！',
+          tag: '數位產品設計',
+          date: '2023/08/10'
+        },
+        {
+          link: '/blog/UIUX-news',
+          image: 'https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/article-image6.png',
+          title: 'React vs. Vue，哪種前端框架比較好用？從三大面向談起',
+          tag: '前端開發',
+          date: '2023/07/03'
+        },
+        {
+          link: '/blog/UIUX-news',
+          image: 'https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/article-image1.png',
+          title: 'Vision Pro 登場！Vision Pro UI/UX 設計重點大公開 (上)',
+          tag: 'UI/UX 新知',
+          date: '2024/02/10'
+        }
+      ]
+    }
+  },
+  methods: {
+    swiperSlideChange (index) {
+      this.activeSlide = 0
+      this.activeSlide += index
+    }
+  }
+}
 </script>
 <style scoped>
 </style>
