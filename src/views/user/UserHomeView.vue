@@ -44,6 +44,7 @@
           <path d="M6 3.5H100" stroke="#C1C1C1"/>
         </svg>
       </span>
+      <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/title-deco-left-sm.png" alt="title-deco-left-sm">
       <h3>作品介紹</h3>
       <span>
         <svg xmlns="http://www.w3.org/2000/svg"
@@ -52,6 +53,7 @@
           <path d="M94 3.5L-1.01328e-06 3.49999" stroke="#C1C1C1"/>
           </svg>
       </span>
+      <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/title-deco-right-sm.png" alt="title-deco-right-sm">
     </div>
     <div class="works-list-wrap">
       <div class="works-list">
@@ -187,6 +189,7 @@
           <path d="M6 3.5H100" stroke="#C1C1C1"/>
         </svg>
       </span>
+      <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/title-deco-left-sm.png" alt="title-deco-left-sm">
       <h3>服務項目</h3>
       <span>
         <svg xmlns="http://www.w3.org/2000/svg"
@@ -195,6 +198,7 @@
           <path d="M94 3.5L-1.01328e-06 3.49999" stroke="#C1C1C1"/>
           </svg>
       </span>
+      <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/title-deco-right-sm.png" alt="title-deco-right-sm">
     </div>
     <ul class="server-list">
       <li>
@@ -230,6 +234,7 @@
           <path d="M6 3.5H100" stroke="#C1C1C1"/>
         </svg>
       </span>
+      <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/title-deco-left-sm.png" alt="title-deco-left-sm">
       <h3>精選文章</h3>
       <span>
         <svg xmlns="http://www.w3.org/2000/svg"
@@ -238,6 +243,7 @@
           <path d="M94 3.5L-1.01328e-06 3.49999" stroke="#C1C1C1"/>
           </svg>
       </span>
+      <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/title-deco-right-sm.png" alt="title-deco-right-sm">
     </div>
     <!--swiper start-->
     <div class="article-swiper">
@@ -418,7 +424,16 @@ export default {
     swiperSlideChange (index) {
       this.activeSlide = 0
       this.activeSlide += index
+    },
+    swiperAutoPlay () {
+      setInterval(() => {
+        this.activeSlide = this.activeSlide >= 4 ? -1 : this.activeSlide
+        this.swiperSlideChange(this.activeSlide + 1)
+      }, 4000)
     }
+  },
+  mounted () {
+    this.swiperAutoPlay()
   }
 }
 </script>

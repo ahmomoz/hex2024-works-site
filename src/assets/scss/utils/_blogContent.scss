@@ -135,6 +135,10 @@
   h4 {
     margin: 5rem 0 2.5rem;
   }
+
+  .article-card-footer {
+    margin-top: 1rem;
+  }
 }
 .blog-content-list-footer > .article-list {
   display: flex;
@@ -155,6 +159,18 @@
       font-size: 1.5rem;
       text-align: center;
       margin: 2.5rem 0;
+    }
+
+    .article-content {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .article-card-footer {
+      align-items: center;
+      flex-direction: row-reverse;
+      margin-top: 0;
+      margin-bottom: 1rem;
     }
   }
 }

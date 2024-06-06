@@ -148,8 +148,8 @@
             </p>
           </div>
           <div class="modal-tag">
-            <p>設計原則：宇宙旅行、深色背景、強烈視覺效果</p>
-            <p>開發方式：Bootstrap、Javascript、RWD</p>
+            <p>設計原則：<br>宇宙旅行、深色背景、強烈視覺效果</p>
+            <p>開發方式：<br>Bootstrap、Javascript、RWD</p>
           </div>
         </div>
       </div>

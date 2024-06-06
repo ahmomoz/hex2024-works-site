@@ -86,10 +86,17 @@
     margin: 0 1.031rem;
     letter-spacing: 0.25rem;
   }
+
+  img {
+    display: none;
+  }
 }
 @media (max-width:768px) {
   .list-header > span > svg {
-    width: 3.125rem;
+    display: none;
+  }
+  .list-header img {
+    display: block;
   }
 }
 

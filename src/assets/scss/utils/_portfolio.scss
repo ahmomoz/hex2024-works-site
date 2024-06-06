@@ -218,6 +218,10 @@
   p {
     color: $primary-color-600;
   }
+
+  br {
+    display: none;
+  }
 }
 .modal-main-content {
   background-color: $primary-color-100;
@@ -249,4 +253,60 @@
 }
 .modal-feature {
   margin-top: 3.5rem;
+}
+
+@media (max-width: 1200px) {
+  .modal {
+    padding: 4.25rem 0.75rem 0;
+  }
+  .modal-demo {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .modal-header {
+    span {
+      font-size: 2rem;
+    }
+  }
+  .modal-description {
+    padding: 1.5rem 0;
+  }
+  .modal-title {
+    h4 {
+      font-size: 1.75rem;
+    }
+  }
+  .modal-text {
+    margin-top: 1.5rem;
+    padding: 0 2rem;
+    flex-direction: column;
+  }
+  .modal-intro {
+    width: 100%;
+  }
+  .modal-tag {
+    border-left: 0;
+    border-top: 1px solid $primary-color-400;
+    text-align: center;
+    margin-top: 1.5rem;
+    padding: 0;
+
+    p {
+      margin-top: 1.5rem;
+    }
+
+    br {
+      display: block;
+    }
+  }
+  .modal-main > p, .modal-feature > p {
+    text-align: left;
+  }
+  .modal-main-content {
+    padding: 2.5rem 1rem;
+  }
+  .modal-main-img {
+    margin-bottom: 1rem;
+  }
 }

@@ -9,14 +9,16 @@
             <path d="M6 3.5H100" stroke="#C1C1C1"/>
           </svg>
         </span>
+        <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/title-deco-left-sm.png" alt="title-deco-left-sm">
         <h3>部落格</h3>
         <span>
           <svg xmlns="http://www.w3.org/2000/svg"
             width="100" height="7" viewBox="0 0 100 7" fill="none">
             <circle cx="97" cy="3.5" r="3" transform="rotate(-180 97 3.5)" fill="#C1C1C1"/>
             <path d="M94 3.5L-1.01328e-06 3.49999" stroke="#C1C1C1"/>
-            </svg>
+          </svg>
         </span>
+        <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/title-deco-right-sm.png" alt="title-deco-right-sm">
       </div>
       <div class="blog-text">
         <p>不定期分享技術文章</p>

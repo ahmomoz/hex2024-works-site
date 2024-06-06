@@ -71,15 +71,17 @@
           <RouterLink class="article-card" :to=" `/blog/UIUX-news`" exact>
             <div class="article-card-header">
               <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/article-image1.png" alt="article-image1">
-              </div>
-            <div class="article-card-body">
-              <h6>Vision Pro 登場！Vision Pro UI/UX 設計重點大公開 (上)</h6>
             </div>
-            <div class="article-card-footer">
-              <ul class="article-tag">
-                <li><span>UI/UX 新知</span></li>
-              </ul>
-              <p>2024/02/10</p>
+            <div class="article-content">
+              <div class="article-card-body">
+                <h6>Vision Pro 登場！Vision Pro UI/UX 設計重點大公開 (上)</h6>
+              </div>
+              <div class="article-card-footer">
+                <ul class="article-tag">
+                  <li><span>UI/UX 新知</span></li>
+                </ul>
+                <p>2024/02/10</p>
+              </div>
             </div>
           </RouterLink>
         </li>
@@ -88,14 +90,16 @@
             <div class="article-card-header">
               <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/article-image7.png" alt="article-image7">
             </div>
-            <div class="article-card-body">
-              <h6>Vision Pro 來了！UIUX 設計師的未來在哪裡？</h6>
-            </div>
-            <div class="article-card-footer">
-              <ul class="article-tag">
-                <li><span>UI/UX 新知</span></li>
-              </ul>
-              <p>2023/07/10</p>
+            <div class="article-content">
+              <div class="article-card-body">
+                <h6>Vision Pro 來了！UIUX 設計師的未來在哪裡？</h6>
+              </div>
+              <div class="article-card-footer">
+                <ul class="article-tag">
+                  <li><span>UI/UX 新知</span></li>
+                </ul>
+                <p>2023/07/10</p>
+              </div>
             </div>
           </RouterLink>
         </li>
